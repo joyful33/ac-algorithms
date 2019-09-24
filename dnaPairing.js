@@ -7,14 +7,53 @@
 //Return the provided character as the first element in each array.
 
 //For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
+// array entire sequence in array pair G to 
+//create object for pair lookup
+
+
+//test here
+pairElement("GCG");
 
 //The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 
 function pairElement(str) {
-  //your code here
-}
+var output =[];
+var array=[]str.split("");
 
-pairElement("GCG");
+for (var i=0; i<array.length; i++){
+  if (array[i]==="G"){
+    output.push(["G","C"]);
+  }else if (array[i]==="C"){
+    output.push(["C", "G"]);
+  }else if (array[i]==="T"){
+    output.push(["T", "A"]);
+  }else{
+    output.push(["A", "T"]);
+  }
+{
+return output;  
+}
+//   var search = function(char) {
+//     switch (char) {
+//       case 'A':
+//         paired.push(['A', 'T']);
+//         break;
+//       case 'T':
+//         paired.push(['T', 'A']);
+//         break;
+//       case 'C':
+//         paired.push(['C', 'G']);
+//         break;
+//       case 'G':
+//         paired.push(['G', 'C']);
+//         break;
+//     }
+//   }
+//   return myPairs;
+//   };
+// }
+
+// pairElement("GCG");
 
 //TEST CASES
 //pairElement("ATCGA") should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]].
